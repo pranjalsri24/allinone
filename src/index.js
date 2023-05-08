@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import React from "react";
+import ReactDOM from "react-dom";
+import Card from "./Cards";
+import Data from "./Data";
+import  App from "./App";
+import "./index.css";
+
+// console.log(Sdata[0])
+const currtime=new Date().toLocaleTimeString();
+const currdate=new Date().toLocaleDateString();
+const cardComponents = Data.map((i)=>(
+    <Card
+     imgsrc={i.imgsrc}
+     description={i.description}
+     title={i.title}
+     link={i.link}
+     />));
+
+ReactDOM.render(
+<>
+<App/>
+<p className="time_date">{currtime}</p>
+<p className="time_date">{currdate}</p>
+{cardComponents}
+</>,document.getElementById("root")
+
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

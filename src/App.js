@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from "react";
+function App(){let curdate=new Date();
+curdate=curdate.getHours();
+let greeting='';
+let cssStyle={
+    background:'white',
+    font:'italic',
+    display:'flex'
+};
+if(curdate>=0 && curdate<12){
+    greeting='Good morning';
+    cssStyle.color='green';
 }
+else if(curdate>=12 && curdate<19){
+    greeting='Good afternoon';
+    cssStyle.color='orange';
+}
+else{
+    greeting='Gud night';
+    cssStyle.color='purple';
+}
+return ( <React.Fragment>
+<div>
 
+    <h1><span style={cssStyle}>{greeting}</span></h1>
+    <h1 className="heading_style">all in one place:</h1>
+    </div>
+    </React.Fragment>
+);
+
+}
 export default App;
+
