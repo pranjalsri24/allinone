@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/allinone/static/css/main.8f14f6a1.css",
+    "main.js": "/allinone/static/js/main.08235b43.js",
+    "index.html": "/allinone/index.html",
+    "main.8f14f6a1.css.map": "/allinone/static/css/main.8f14f6a1.css.map",
+    "main.08235b43.js.map": "/allinone/static/js/main.08235b43.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8f14f6a1.css",
+    "static/js/main.08235b43.js"
+  ]
+}
