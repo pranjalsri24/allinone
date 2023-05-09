@@ -36,7 +36,7 @@ body { margin: 0; padding:0; box-sizing:border-box; background-color: rgb(234, 2
   }
 
   .card_img{
-    height: 235px;
+    height: 100%;
     width: 100%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
